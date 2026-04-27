@@ -6,7 +6,7 @@ namespace Config;
  * This file contains an array of mime types.  It is used by the
  * Upload class to help identify allowed file types.
  *
- * When more than one variation for an extension exist (like jpg, jpeg, etc)
+ * When more than one variation for an extension exist (like png, jpeg, etc)
  * the most common one should be first in the array to aid the guess*
  * methods. The same applies when more than one mime-type exists for a
  * single extension.
@@ -194,7 +194,7 @@ class Mimes
             'application/x-win-bitmap',
         ],
         'gif' => 'image/gif',
-        'jpg' => [
+        'png' => [
             'image/jpeg',
             'image/pjpeg',
         ],
@@ -224,7 +224,7 @@ class Mimes
             'image/jpx',
             'image/jpm',
         ],
-        'jpg2' => [
+        'png2' => [
             'image/jp2',
             'video/mj2',
             'image/jpx',

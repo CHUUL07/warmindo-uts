@@ -55,11 +55,11 @@
                 <div class="catalog-card-img-wrap">
                     <?php
                     $imgMap = [
-                        'kuah'    => 'placeholder-kuah.jpg',
-                        'goreng'  => 'placeholder-goreng.jpg',
-                        'minuman' => 'placeholder-minuman.jpg',
+                        'kuah'    => 'placeholder-kuah.png',
+                        'goreng'  => 'placeholder-menu.png',
+                        'minuman' => 'placeholder-minuman.png',
                     ];
-                    $imgFile = $imgMap[$item['category']] ?? 'placeholder-menu.jpg';
+                    $imgFile = $imgMap[$item['category']] ?? 'placeholder-menu.png';
                     ?>
                     <!-- REPLACE: /images/<?= $imgFile ?> — Foto <?= esc($item['name']) ?> tampak atas atau 45 derajat -->
                     <img src="/images/<?= $imgFile ?>"

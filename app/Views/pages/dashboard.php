@@ -45,9 +45,9 @@
         <div class="hero-image-wrap">
             <!-- Floating main image -->
             <!-- REPLACE: /images/hero-bowl.png — Foto mangkuk mi indomie rebus spesial dari atas (hero image utama) -->
-            <img src="/images/placeholder-hero.jpg"
-                 alt="Indomie Warmindo Kampus-In"
-                 class="hero-float-img">
+            <img src="/images/placeholder-hero.png"
+                alt="Indomie Warmindo Kampus-In"
+                class="hero-float-img">
             <!-- Glow ring behind image -->
             <div class="hero-glow-ring"></div>
         </div>
@@ -56,10 +56,10 @@
     <!-- Scroll Mouse Indicator -->
     <div class="scroll-indicator" aria-label="Scroll ke bawah">
         <svg class="mouse-svg" viewBox="0 0 30 50" xmlns="http://www.w3.org/2000/svg">
-            <rect x="1" y="1" width="28" height="48" rx="14" fill="none" stroke="#59ccec" stroke-width="2"/>
+            <rect x="1" y="1" width="28" height="48" rx="14" fill="none" stroke="#59ccec" stroke-width="2" />
             <circle class="mouse-dot" cx="15" cy="14" r="4" fill="#59ccec">
-                <animate attributeName="cy" values="14;32;14" dur="1.6s" repeatCount="indefinite" calcMode="ease-in-out"/>
-                <animate attributeName="opacity" values="1;0.2;1" dur="1.6s" repeatCount="indefinite"/>
+                <animate attributeName="cy" values="14;32;14" dur="1.6s" repeatCount="indefinite" calcMode="ease-in-out" />
+                <animate attributeName="opacity" values="1;0.2;1" dur="1.6s" repeatCount="indefinite" />
             </circle>
         </svg>
         <span class="scroll-label">Scroll</span>
@@ -125,10 +125,10 @@
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="menu-card">
                     <div class="menu-card-img-wrap">
-                        <!-- REPLACE: /images/menu-rebus.jpg — Foto Indomie Rebus Spesial tampak atas -->
-                        <img src="/images/placeholder-menu.jpg"
-                             alt="Indomie Rebus Spesial"
-                             class="menu-card-img">
+                        <!-- REPLACE: /images/menu-rebus.png — Foto Indomie Rebus Spesial tampak atas -->
+                        <img src="/images/placeholder-kuah.png"
+                            alt="Indomie Rebus Spesial"
+                            class="menu-card-img">
                         <div class="menu-card-badge">Best Seller</div>
                     </div>
                     <div class="menu-card-body">
@@ -141,10 +141,10 @@
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="menu-card">
                     <div class="menu-card-img-wrap">
-                        <!-- REPLACE: /images/menu-goreng.jpg — Foto Indomie Goreng Spesial tampak atas -->
-                        <img src="/images/placeholder-menu.jpg"
-                             alt="Indomie Goreng Spesial"
-                             class="menu-card-img">
+                        <!-- REPLACE: /images/menu-goreng.png — Foto Indomie Goreng Spesial tampak atas -->
+                        <img src="/images/placeholder-menu.png"
+                            alt="Indomie Goreng Spesial"
+                            class="menu-card-img">
                         <div class="menu-card-badge menu-card-badge--new">Favorit</div>
                     </div>
                     <div class="menu-card-body">
@@ -157,10 +157,10 @@
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="menu-card">
                     <div class="menu-card-img-wrap">
-                        <!-- REPLACE: /images/menu-kopi.jpg — Foto kopi susu hangat dalam gelas -->
-                        <img src="/images/placeholder-menu.jpg"
-                             alt="Kopi Susu Hangat"
-                             class="menu-card-img">
+                        <!-- REPLACE: /images/menu-kopi.png — Foto kopi susu hangat dalam gelas -->
+                        <img src="/images/placeholder-minuman.png"
+                            alt="Kopi Susu Hangat"
+                            class="menu-card-img">
                         <div class="menu-card-badge menu-card-badge--drink">Minuman</div>
                     </div>
                     <div class="menu-card-body">

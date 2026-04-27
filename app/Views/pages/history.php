@@ -29,10 +29,10 @@
                 </p>
             </div>
             <div class="split-image">
-                <!-- REPLACE: /images/history-1.jpg — Foto gerobak warmindo atau suasana warung mie lama (vintage/retro feel) -->
-                <img src="/images/placeholder-history.jpg"
-                     alt="Gerobak awal Warmindo Kampus-In tahun 2018"
-                     class="split-img">
+                <!-- REPLACE: /images/history-1.png — Foto gerobak warmindo atau suasana warung mie lama (vintage/retro feel) -->
+                <img src="/images/placeholder-history.png"
+                    alt="Gerobak awal Warmindo Kampus-In tahun 2018"
+                    class="split-img">
                 <div class="split-img-caption">Gerobak pertama kami, 2018.</div>
             </div>
         </div>
@@ -44,10 +44,10 @@
     <div class="container-fluid px-4">
         <div class="split-row split-row--reverse">
             <div class="split-image">
-                <!-- REPLACE: /images/history-2.jpg — Foto warung permanen / bangunan warmindo yang sudah ada meja kursi -->
-                <img src="/images/placeholder-history.jpg"
-                     alt="Warung tetap Warmindo Kampus-In tahun 2020"
-                     class="split-img">
+                <!-- REPLACE: /images/history-2.png — Foto warung permanen / bangunan warmindo yang sudah ada meja kursi -->
+                <img src="/images/placeholder-history.png"
+                    alt="Warung tetap Warmindo Kampus-In tahun 2020"
+                    class="split-img">
                 <div class="split-img-caption">Warung tetap pertama kami, 2020.</div>
             </div>
             <div class="split-text">
@@ -90,10 +90,10 @@
                 </p>
             </div>
             <div class="split-image">
-                <!-- REPLACE: /images/history-3.jpg — Foto suasana warung modern dengan pelanggan ngoding dan wifi -->
-                <img src="/images/placeholder-history.jpg"
-                     alt="Suasana Warmindo Kampus-In di era digital 2023"
-                     class="split-img">
+                <!-- REPLACE: /images/history-3.png — Foto suasana warung modern dengan pelanggan ngoding dan wifi -->
+                <img src="/images/placeholder-history.png"
+                    alt="Suasana Warmindo Kampus-In di era digital 2023"
+                    class="split-img">
                 <div class="split-img-caption">Era digital dimulai, 2023.</div>
             </div>
         </div>
