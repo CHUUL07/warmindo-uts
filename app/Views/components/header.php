@@ -4,12 +4,12 @@
         <div class="d-flex align-items-center gap-3">
             <!-- Hamburger — triggers Offcanvas Sidebar -->
             <button class="hamburger-btn d-lg-none" type="button"
-                    data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar"
-                    aria-controls="mobileSidebar" aria-label="Buka menu">
+                data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar"
+                aria-controls="mobileSidebar" aria-label="Buka menu">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect y="4" width="24" height="2" rx="1" fill="white"/>
-                    <rect y="11" width="24" height="2" rx="1" fill="white"/>
-                    <rect y="18" width="24" height="2" rx="1" fill="white"/>
+                    <rect y="4" width="24" height="2" rx="1" fill="white" />
+                    <rect y="11" width="24" height="2" rx="1" fill="white" />
+                    <rect y="18" width="24" height="2" rx="1" fill="white" />
                 </svg>
             </button>
 
@@ -25,6 +25,8 @@
 
         <!-- Desktop Navigation -->
         <ul class="nav-menu d-none d-lg-flex align-items-center list-unstyled mb-0 gap-1">
+
+            <!-- Always visible: Guest + Admin -->
             <li>
                 <a href="/dashboard" class="nav-link-custom <?= ($active === 'dashboard') ? 'active' : '' ?>">
                     <i class="bi bi-grid-1x2"></i> Dashboard
@@ -40,29 +42,52 @@
                     <i class="bi bi-journal-text"></i> Katalog
                 </a>
             </li>
-            <li>
-                <a href="/promos" class="nav-link-custom <?= ($active === 'promos') ? 'active' : '' ?>">
-                    <i class="bi bi-ticket-perforated"></i> Promo
-                </a>
-            </li>
-            <li>
-                <a href="/contact" class="nav-link-custom <?= ($active === 'contact') ? 'active' : '' ?>">
-                    <i class="bi bi-envelope"></i> Kontak
-                </a>
-            </li>
-            <li class="ms-2">
-                <a href="/logout" class="btn-logout">
-                    <i class="bi bi-box-arrow-right"></i> Logout
-                </a>
-            </li>
+
+            <?php if (session()->get('isLoggedIn')): ?>
+                <!-- Admin-only menus -->
+                <li>
+                    <a href="/promos" class="nav-link-custom <?= ($active === 'promos') ? 'active' : '' ?>">
+                        <i class="bi bi-ticket-perforated"></i> Promo
+                    </a>
+                </li>
+                <li>
+                    <a href="/contact" class="nav-link-custom <?= ($active === 'contact') ? 'active' : '' ?>">
+                        <i class="bi bi-envelope"></i> Kontak
+                    </a>
+                </li>
+                <li>
+                    <a href="/laporan" class="nav-link-custom <?= ($active === 'laporan') ? 'active' : '' ?>" style="color: #59ccec; font-weight: bold;">
+                        <i class="bi bi-graph-up-arrow"></i> Laporan
+                    </a>
+                </li>
+                <li class="ms-2">
+                    <a href="/logout" class="btn-logout">
+                        <i class="bi bi-box-arrow-right"></i> Logout
+                    </a>
+                </li>
+            <?php else: ?>
+                <!-- Guest: Login Admin button — identical CSS class to btn-logout -->
+                <li class="ms-2">
+                    <a href="/login" class="btn-logout">
+                        <i class="bi bi-person-lock"></i> Login Admin
+                    </a>
+                </li>
+            <?php endif; ?>
+
         </ul>
 
-        <!-- Mobile user icon -->
+        <!-- Mobile right side -->
         <div class="d-flex d-lg-none align-items-center gap-2">
-            <span class="text-muted small"><?= esc(session()->get('username') ?? 'admin') ?></span>
-            <a href="/logout" class="btn-logout btn-logout-sm">
-                <i class="bi bi-box-arrow-right"></i>
-            </a>
+            <?php if (session()->get('isLoggedIn')): ?>
+                <span class="text-muted small"><?= esc(session()->get('username') ?? 'admin') ?></span>
+                <a href="/logout" class="btn-logout btn-logout-sm">
+                    <i class="bi bi-box-arrow-right"></i>
+                </a>
+            <?php else: ?>
+                <a href="/login" class="btn-logout btn-logout-sm">
+                    <i class="bi bi-person-lock"></i>
+                </a>
+            <?php endif; ?>
         </div>
     </nav>
 </header>

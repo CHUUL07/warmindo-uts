@@ -1,3 +1,7 @@
+/*
+public\css\style.css
+*/
+
 /* ═══════════════════════════════════════════════════════════════
    WARMINDO KAMPUS-IN — MAIN STYLESHEET
    Colors: #000000 (BG), #ffffff / #aaa (text), #59ccec (accent)
@@ -902,6 +906,292 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     padding: 60px 20px;
     color: var(--text-muted);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SIDEBAR — LOGIN ADMIN LINK (Guest state)
+   Matches sidebar-link--logout color pattern
+═══════════════════════════════════════════════════════════════ */
+.sidebar-link--login {
+    color: var(--primary);
+}
+.sidebar-link--login:hover {
+    color: var(--primary-dark);
+    border-left-color: var(--primary);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LAPORAN — SUMMARY CARDS
+═══════════════════════════════════════════════════════════════ */
+.report-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.report-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 20px 22px;
+    transition: border-color 0.2s;
+}
+.report-card:hover { border-color: var(--primary); }
+
+.report-card-icon {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(89,204,236,0.1);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--primary);
+    flex-shrink: 0;
+}
+.report-card-icon--blue   { background-color: rgba(100,149,237,0.1); color: #6495ed; }
+.report-card-icon--orange { background-color: rgba(255,159,67,0.1);  color: #ff9f43; }
+.report-card-icon--teal   { background-color: rgba(78,205,196,0.1);  color: #4ecdc4; }
+
+.report-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+}
+.report-card-label {
+    font-size: 0.72rem;
+    font-family: var(--font-ui);
+    color: var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+.report-card-value {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--text);
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.report-card-value--sm { font-size: 1rem; white-space: normal; }
+
+/* ═══════════════════════════════════════════════════════════════
+   LAPORAN — ADMIN BAR
+═══════════════════════════════════════════════════════════════ */
+.report-admin-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    background-color: rgba(89,204,236,0.06);
+    border: 1px solid rgba(89,204,236,0.2);
+    border-radius: var(--radius);
+    font-size: 0.82rem;
+    color: var(--text-dark);
+    font-family: var(--font-ui);
+}
+.report-admin-bar i { color: var(--primary); }
+
+/* ═══════════════════════════════════════════════════════════════
+   LAPORAN — DATA TABLE
+═══════════════════════════════════════════════════════════════ */
+.report-table-wrap {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.report-table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 22px;
+    border-bottom: 1px solid var(--border);
+}
+.report-table-title {
+    font-size: 1rem;
+    font-family: var(--font-ui);
+    color: var(--text);
+}
+.report-table-count {
+    font-size: 0.75rem;
+    font-family: var(--font-ui);
+    color: var(--text-dark);
+    background-color: var(--bg-alt);
+    padding: 3px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+}
+
+.report-table-scroll { overflow-x: auto; }
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.report-table thead tr {
+    background-color: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+}
+.report-table th {
+    padding: 11px 16px;
+    font-family: var(--font-ui);
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+}
+.report-table tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background-color 0.15s;
+}
+.report-table tbody tr:last-child { border-bottom: none; }
+.report-table tbody tr:hover { background-color: rgba(255,255,255,0.02); }
+
+.report-table td {
+    padding: 12px 16px;
+    color: var(--text-muted);
+    vertical-align: middle;
+}
+
+.report-td-id {
+    font-family: 'Courier New', monospace;
+    font-size: 0.78rem;
+    color: var(--text-dark);
+}
+.report-td-item {
+    color: var(--text);
+    font-family: var(--font-ui);
+    font-weight: 500;
+    white-space: nowrap;
+}
+.report-td-num { font-family: var(--font-ui); color: var(--text-muted); }
+.report-td-total {
+    font-family: var(--font-ui);
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* Category badges inside table */
+.report-cat-badge {
+    padding: 3px 9px;
+    font-size: 0.68rem;
+    font-family: var(--font-ui);
+    font-weight: 700;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+.report-cat-kuah    { background-color: rgba(78,205,196,0.15);  color: #4ecdc4; }
+.report-cat-goreng  { background-color: rgba(255,159,67,0.15);  color: #ff9f43; }
+.report-cat-minuman { background-color: rgba(89,204,236,0.15);  color: var(--primary); }
+
+/* Status badges */
+.report-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 10px;
+    font-size: 0.72rem;
+    font-family: var(--font-ui);
+    font-weight: 600;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+.report-status--selesai { background-color: rgba(89,204,236,0.1); color: var(--primary); }
+.report-status--pending { background-color: rgba(255,159,67,0.1); color: #ff9f43; }
+
+/* Table footer total row */
+.report-table tfoot tr { border-top: 2px solid var(--border); background-color: var(--bg-alt); }
+.report-tfoot-label {
+    padding: 13px 16px;
+    font-family: var(--font-ui);
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    text-align: right;
+}
+.report-tfoot-total {
+    padding: 13px 16px;
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--primary);
+    letter-spacing: 0.04em;
+    text-align: right;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LAPORAN — PURE CSS BAR CHART
+═══════════════════════════════════════════════════════════════ */
+.report-chart-wrap {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px 26px;
+}
+.report-chart-title {
+    font-size: 0.95rem;
+    font-family: var(--font-ui);
+    margin-bottom: 20px;
+    color: var(--text);
+}
+.report-bars { display: flex; flex-direction: column; gap: 14px; }
+
+.report-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.report-bar-label {
+    font-size: 0.78rem;
+    font-family: var(--font-ui);
+    color: var(--text-muted);
+    width: 64px;
+    flex-shrink: 0;
+    text-align: right;
+}
+.report-bar-track {
+    flex: 1;
+    height: 28px;
+    background-color: var(--bg-alt);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+.report-bar-fill {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: var(--radius);
+    transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+}
+.report-bar-fill--goreng  { background-color: #ff9f43; }
+.report-bar-fill--minuman { background-color: var(--primary); }
+.report-bar-fill--kuah    { background-color: #4ecdc4; }
+
+.report-bar-pct {
+    position: absolute;
+    right: 10px;
+    font-size: 0.72rem;
+    font-family: var(--font-ui);
+    font-weight: 700;
+    color: #000;
 }
 
 /* ═══════════════════════════════════════════════════════════════

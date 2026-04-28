@@ -25,6 +25,7 @@ class AuthController extends BaseController
                 'isLoggedIn' => true,
                 'username'   => 'admin',
                 'fullname'   => 'Administrator',
+                'role'       => 'admin',
             ]);
             return redirect()->to('/dashboard');
         }
@@ -36,6 +37,7 @@ class AuthController extends BaseController
     public function logout()
     {
         session()->destroy();
-        return redirect()->to('/login')->with('success', 'Berhasil logout.');
+        // Redirect to guest dashboard, NOT login
+        return redirect()->to('/dashboard');
     }
 }
